@@ -1,2 +1,2 @@
-print('Teste de Exercício')
-name = str(input('Digite um nome: '))
+num = float(input('Digite um valor: '))
+print('O valor digitado foi {} a a sua porção inteira é {}'.format(num, int(num)))

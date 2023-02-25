@@ -1,2 +1,2 @@
-import playsound
-playsound.playsound('ex021.mp3')
+from playsound import playsound
+playsound('audio.mp3')

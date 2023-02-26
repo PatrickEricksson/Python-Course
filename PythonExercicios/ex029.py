@@ -1,6 +1,6 @@
-n = str(input('Digite seu nome completo: ')).strip()
-nome = n.split()
-print('Muito prazer em te conhecer!')
-print('Seu primeiro nome é {}'. format(nome[0]))
-print('Seu último nome é {}'.format(nome[len(nome)-1]))
-print('Novo teste de Python'.format(nome))
+vel = float(input('Qual é a velocidade atual do carro: '))
+if vel > 80:
+    print('Você foi multado! Limite de 80 km/h excedido!')
+    multa = (vel - 80) * 7
+    print('Você deve pagar uma multa de R$ {:.2f}'.format(multa))
+print('Tenha um bom dia! Dirija com segurança!')

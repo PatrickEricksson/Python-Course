@@ -1,15 +1,15 @@
 from datetime import date
-ano_nasc = int(input('Ano de Nascimento do Atleta: '))
 ano_atual = date.today().year
+ano_nasc = int(input('Ano de Nascimento do Atleta: '))
 idade = ano_atual - ano_nasc
-print('IDADE ATUAL: {}'.format(idade))
+print('IDADE ATUAL: {} anos'.format(idade))
 if idade <= 9:
-    print('MIRIM')
+    print('Classificado: MIRIM')
 elif idade <= 14:
-    print('INFANTIL')
+    print('Classificado: INFANTIL')
 elif idade <= 19:
-    print('JUNIOR')
-elif idade <= 20:
-    print('SÊNIOR')
+    print('Classificado: JUNIOR')
+elif idade <= 25:
+    print('Classificado: SÊNIOR')
 else:
-    print('MASTER')
+    print('Classificado: MASTER')

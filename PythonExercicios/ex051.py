@@ -1,6 +1,6 @@
 t1 = int(input('Primeiro termo: '))
-p = int(input('Progressão: '))
-decimo = t1 + (10 - 1) * p
-for c in range(t1, decimo + p, p):
+r = int(input('Progressão: '))
+decimo = t1 + (10 - 1) * r
+for c in range(t1, decimo + r, r):
     print('{}'.format(c), end=' - ')
 print('ACABOU')

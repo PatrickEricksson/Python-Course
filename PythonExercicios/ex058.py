@@ -1,13 +1,18 @@
 from random import randint
-from time import sleep
-n_comp = randint(0, 5) # Faz o computador pensar
-print('-=-' * 20)
-print('Vou pensar em um número entre 0 e 5. Tente adivinhar...')
-print('-=-' * 20)
-n_user = int(input('Em que número eu pensei? ')) # Jogador tenta adivinhar
-print('PROCESSANDO...')
-sleep(3)
-if n_user == n_comp:
-    print('PARABÉNS, você conseguiu me vencer!')
-else:
-    print('GANHEI! Eu pensei no número {} e não no {}!'.format(n_comp, n_user))
+computador = randint(0, 10) # Faz o computador pensar
+print('Sou seu computador...')
+print('Acabei de pensar em um número entre 0 e 10.')
+print('Será que você consegue adivinhar qual foi?')
+acertou = False
+tentativas = 0
+while not acertou:
+    jogador = int(input('Qual é seu palpite? '))
+    tentativas += 1
+    if jogador == computador:
+        acertou = True
+    else:
+        if jogador < computador:
+            print('Mais... Tente mais uma vez.')
+        elif jogador > computador:
+            print('Menos... Tente mais uma vez')
+print('Acertou com {} tentativas. Parabéns!'.format(tentativas))

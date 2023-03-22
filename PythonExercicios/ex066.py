@@ -1,3 +1,4 @@
+import requests
+import json
 print('Mapa do Dividendo Inteligente')
-print('Carteira de Dividendos')
-print('Teste de Python')
+requisicao = requests.get(‘https://economia.awesomeapi.com.br/all/USD-BRL')

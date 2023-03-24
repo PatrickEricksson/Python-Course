@@ -1,17 +1,30 @@
 from random import randint
+v = 0
 print('=-' * 20)
 print('VAMOS JOGAR PAR OU ÍMPAR')
 print('=-' * 20)
-jogador = int(input('Digite um valor: '))
-resp_jogador = str(input('Par ou Ímpar? [P/I] '))
-if resp_jogador == 'P':
-    resp_computador = 'I'
-else:
-    resp_computador = 'P'
-computador = randint(0, 10)
-soma = jogador + computador
-if soma % 2 == 0:
-    resultado = 'PAR'
-else:
-    resultado - 'ÍMPAR'
-print(f'Você jogou {jogador} e o computador {computador}. Total de {soma} DEU {resultado}')
+while True:
+    jogador = int(input('Digite um valor: '))
+    computador = randint(0, 10)
+    total = jogador + computador
+    tipo = ' '
+    while tipo not in 'PI':
+        tipo = str(input('Par ou Ímpar? [P/I] ')).strip().upper()[0]
+    print(f'Você jogou {jogador} e o computador {computador}. Total de {total} ', end='')
+    print('DEU PAR' if total % 2 == 0 else 'DEU ÍMPAR')
+    if tipo == 'P':
+        if total % 2 == 0:
+            print('Você VENCEU')
+            v += 1
+        else:
+            print('Você PERDEU')
+            break
+    elif tipo == 'I':
+        if total % 2 == 1:
+            print('Você VENCEU!')
+            v += 1
+        else:
+            print('Você PERDEU')
+            break
+    print('Vamos jogar novamente...')
+print(f'GAME OVER! Você venceu {v} vezes.')

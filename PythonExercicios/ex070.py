@@ -1,8 +1,6 @@
 tot = totmil = menor = cont = 0
 barato = ''
-print('-' * 30)
-print('LOJA SUPER BARATÃO')
-print('-' * 30)
+print('{:-^40}'.format(' LOJA SUPER BARATÃO '))
 while True:
     produto = str(input('Nome do Produto: '))
     preco = float(input('Preço: R$ '))

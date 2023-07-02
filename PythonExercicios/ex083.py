@@ -1,0 +1,1 @@
+print('Crie um programa onde o usuário digite uma expressão qualquer que use parênteses')

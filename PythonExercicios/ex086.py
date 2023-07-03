@@ -1,5 +1,9 @@
-matriz = []
-for l in range(1, 3):
-    for c in range(1,3):
-        matriz.append(int(input(f'Digite o valor da linha {l} e coluna {c}:')))
-print(matriz)
+matriz = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+for l in range(0, 3):
+    for c in range(0,3):
+        matriz[l][c] = int(input(f'Digite um valor para [{l}, {c}]: '))
+print('-=' * 30)
+for l in range(0, 3):
+    for c in range (0, 3):
+        print(f'[{matriz[l][c]:^5}]', end='')
+    print()

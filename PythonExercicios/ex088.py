@@ -1,0 +1,1 @@
+print('Palpites para a Mega Sena')

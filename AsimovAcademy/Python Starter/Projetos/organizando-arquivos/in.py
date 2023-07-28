@@ -6,7 +6,8 @@ files_list = [i.lower() for i in full_list if os.path.isfile(i) and '.py' not in
 
 types = list(set([i.split('.')[-1] for i in files_list]))
 for file_type in types:
-    os.mkdir(file_type)
+    if not os.path.exists(file_type):
+        os.mkdir(file_type)
 
 for file in files_list:
     path_from = cwd + '/' + file

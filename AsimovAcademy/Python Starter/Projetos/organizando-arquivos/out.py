@@ -1,7 +1,7 @@
 import os
 
 cwd = os.getcwd()
-folder_list = [i for i in os.listdir(cwd) if os.path.isdir(i)]
+folder_list = [i for i in os.listdir(cwd) if os.path.isdir(i)] #Lista as pastas existentes no diretório
 
 for folder in folder_list:
     path = cwd + '/' + folder

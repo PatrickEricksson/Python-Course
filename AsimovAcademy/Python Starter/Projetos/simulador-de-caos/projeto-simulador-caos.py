@@ -4,9 +4,9 @@ import seaborn as sns
 class Academia:
     def __init__(self):
         self.halteres = [i for i in range(10, 36) if i % 2 == 0]
-        self.porta_halteres = {}
+        self.porta_halteres = {} #Dicionário onde as chaves são a posição e os valores são os alteres pegos
         self.reiniciar_o_dia()
-        
+    
     def reiniciar_o_dia(self):
         self.porta_halteres = {i: i for i in self.halteres}
     
@@ -30,7 +30,7 @@ class Academia:
         return len(num_caos) / len(self.porta_halteres)
     
 class Usuario:
-    def __init__(self, tipo, academia):
+    def __init__(self, tipo, academia): #O atributo academia funciona como ponteiro  
         self.tipo = tipo #1 -Normal | 2 - Bagunceiro
         self.academia = academia
         self.peso = 0
@@ -74,3 +74,7 @@ for k in range(50):
     list_chaos += [academia.calcular_caos()]
 
 sns.displot(list_chaos)
+
+
+#Academia: tem o porta-alteres e os alteres
+#Usuário: interagem com os alteres. Podem ser organizados ou bagunçados
